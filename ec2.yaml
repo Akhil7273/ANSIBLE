@@ -36,9 +36,9 @@
   tasks:
     - name: Create a security group
       amazon.aws.ec2_group:
-        name: "{{ akhil }}"
+        name: "{{ security_group }}"
         description: Security Group for webserver Servers
-        region: "{{ ap-south-1 }}"
+        region: "{{ region }}"
         rules:
           - proto: tcp
             from_port: 22
